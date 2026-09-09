@@ -136,25 +136,164 @@
   <h1>SK HERBAL PRODUCTS</h1>
   <p>Natural Care for Natural Beauty 🌿</p>
 </header>
-<div style="text-align: center; padding: 30px;">
-    
-    <!-- HAIR OIL -->
-    <div style="display: inline-block; width: 280px; margin: 15px; background: white; padding: 15px; border-radius: 10px;">
-        <img src="herbal oil.jpg" alt="SK Herbal Hair Oil" style="width: 200px; border-radius: 10px;">
-        <h2>HERBAL HAIR OIL</h2>
-        <p>Promotes Hair Growth - Stronger, Thicker, Healthier</p>
-        <p><b>Rs. 300</b></p>
+<!-- PRODUCTS SECTION -->
+<style>
+.products-section {
+    background: #f7f4ed;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 36px;
+    color: #294b2a;
+    margin-bottom: 10px;
+}
+
+.products-section .subtitle {
+    color: #777;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.products-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.product-card h3 {
+    color: #294b2a;
+    font-size: 25px;
+    margin: 18px 0 8px;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 6px 0;
+}
+
+.product-price {
+    font-size: 21px !important;
+    font-weight: bold;
+    color: #9a6b25 !important;
+    margin-top: 12px !important;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 25px;
+    background: #294b2a;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.shop-button:hover {
+    background: #1d361f;
+}
+
+@media (max-width: 700px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section h2 {
+        font-size: 30px;
+    }
+
+    .product-card img {
+        height: 350px;
+    }
+}
+</style>
+
+<section class="products-section" id="products">
+
+    <h2>Our Herbal Products</h2>
+
+    <p class="subtitle">
+        Natural care for healthy, beautiful hair
+    </p>
+
+    <div class="products-grid">
+
+        <!-- HAIR OIL -->
+        <div class="product-card">
+
+            <img src="herbal oil.jpg"
+                 alt="SK Herbal Hair Oil">
+
+            <h3>Herbal Hair Oil</h3>
+
+            <p>
+                Promotes hair growth and helps keep your hair
+                stronger, thicker and healthier.
+            </p>
+
+            <p class="product-price">
+                Rs. 300
+            </p>
+
+            <a href="#contact" class="shop-button">
+                Order Now
+            </a>
+
+        </div>
+
+
+        <!-- SHAMPOO -->
+        <div class="product-card">
+
+            <img src="products.jpg"
+                 alt="SK Herbal Shampoo">
+
+            <h3>Herbal Shampoo</h3>
+
+            <p>
+                Natural care for clean, soft and healthy hair,
+                made with natural herbs and extracts.
+            </p>
+
+            <p class="product-price">
+                Rs. 400
+            </p>
+
+            <a href="#contact" class="shop-button">
+                Order Now
+            </a>
+
+        </div>
+
     </div>
 
-    <!-- SHAMPOO -->
-    <div style="display: inline-block; width: 280px; margin: 15px; background: white; padding: 15px; border-radius: 10px;">
-        <img src="herbal shampoo.jpg" alt="SK Herbal Shampoo" style="width: 200px; border-radius: 10px;">
-        <h2>HERBAL SHAMPOO</h2>
-        <p>Natural Care for Clean, Soft & Healthy Hair</p>
-        <p><b>Rs. 400</b></p>
-    </div>
-
-</div>
+</section>
 <nav>
   <a href="#home">Home</a>
   <a href="#products">Products</a>
