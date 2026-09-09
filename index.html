@@ -1,417 +1,997 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SK Herbal Products</title>
+    <meta charset="UTF-8">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    body {
-      background: #f8f5e9;
-      color: #173d25;
-    }
+    <meta name="description"
+          content="SK Herbal Products - Natural herbal hair care for healthy, beautiful hair.">
 
-    header {
-      background: #064d2b;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+    <title>SK Herbal Products | Natural Care for Natural Beauty</title>
 
-    header h1 {
-      font-size: 38px;
-      letter-spacing: 2px;
-    }
+    <style>
 
-    header p {
-      margin-top: 10px;
-      font-size: 17px;
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    nav {
-      background: white;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px #ccc;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    nav a {
-      color: #064d2b;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f5ee;
+            color: #333;
+            line-height: 1.6;
+        }
 
-    .hero {
-      text-align: center;
-      padding: 55px 20px;
-      background: #e8f1df;
-    }
+        /* =========================
+           NAVIGATION
+        ========================= */
 
-    .hero h2 {
-      font-size: 34px;
-      margin-bottom: 15px;
-    }
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
 
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
+            background: rgba(255,255,255,0.97);
 
-    .button {
-      display: inline-block;
-      background: #08783f;
-      color: white;
-      padding: 13px 25px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 
-    .products {
-      padding: 45px 20px;
-      text-align: center;
-    }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-    .products h2 {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
+            padding: 15px 7%;
+        }
 
-    .product-container {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+        .logo {
+            color: #294b2a;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-    .product {
-      background: white;
-      width: 240px;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 3px 12px #ccc;
-    }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
 
-    .product h3 {
-      margin: 15px 0 10px;
-      font-size: 21px;
-    }
+        .nav-links a {
+            color: #294b2a;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .product p {
-      margin-bottom: 15px;
-      color: #555;
-    }
+        .nav-links a:hover {
+            color: #a67836;
+        }
 
-    .order {
-      background: #064d2b;
-      color: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
 
-    .order h2 {
-      margin-bottom: 15px;
-    }
+        /* =========================
+           HERO / HEADER
+        ========================= */
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #022f1b;
-      color: white;
-    }
-  </style>
+        .hero {
+            min-height: 600px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 70px 7%;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    #edf2e7,
+                    #f8f3e7
+                );
+        }
+
+        .hero-content {
+            max-width: 1150px;
+            width: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            color: #294b2a;
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero-text h2 {
+            color: #a67836;
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 18px;
+            max-width: 520px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 13px 27px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #294b2a;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #1c351e;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 2px solid #294b2a;
+            color: #294b2a;
+        }
+
+        .btn-secondary:hover {
+            background: #294b2a;
+            color: white;
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image-box {
+            background: white;
+            padding: 18px;
+            border-radius: 25px;
+
+            box-shadow: 0 15px 40px rgba(0,0,0,0.13);
+
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+
+            object-fit: contain;
+
+            border-radius: 18px;
+
+            display: block;
+        }
+
+
+        /* =========================
+           GENERAL SECTION
+        ========================= */
+
+        section {
+            padding: 75px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            color: #294b2a;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PRODUCTS
+        ========================= */
+
+        #products {
+            background: #f7f5ee;
+        }
+
+        .products-grid {
+            max-width: 1000px;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 35px;
+        }
+
+        .product-card {
+            background: white;
+
+            border-radius: 22px;
+
+            padding: 18px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.09);
+
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.14);
+        }
+
+        .product-image {
+            width: 100%;
+
+            height: 300px;
+
+            background: #f5f1e8;
+
+            border-radius: 16px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            display: block;
+        }
+
+        .product-card h3 {
+            color: #294b2a;
+
+            font-size: 25px;
+
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        .product-description {
+            color: #666;
+
+            font-size: 15px;
+
+            max-width: 400px;
+
+            margin: 0 auto 10px;
+        }
+
+        .product-details {
+            color: #777;
+
+            font-size: 14px;
+
+            margin-bottom: 10px;
+        }
+
+        .price {
+            color: #a67836;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            margin: 10px 0 15px;
+        }
+
+        .order-btn {
+            display: inline-block;
+
+            background: #294b2a;
+
+            color: white;
+
+            padding: 11px 26px;
+
+            border-radius: 25px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #1c351e;
+
+            transform: scale(1.03);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 950px;
+
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .about-container h2 {
+            color: #294b2a;
+
+            font-size: 36px;
+
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            color: #666;
+
+            font-size: 17px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           BENEFITS
+        ========================= */
+
+        .benefits {
+            background: #edf2e7;
+        }
+
+        .benefits-grid {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .benefit-card {
+            background: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .benefit-icon {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .benefit-card h3 {
+            color: #294b2a;
+
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            color: #666;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           ORDER SECTION
+        ========================= */
+
+        .order-section {
+            background:
+                linear-gradient(
+                    120deg,
+                    #294b2a,
+                    #3e6540
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .order-section h2 {
+            font-size: 38px;
+
+            margin-bottom: 12px;
+        }
+
+        .order-section p {
+            font-size: 18px;
+
+            margin-bottom: 25px;
+
+            opacity: 0.9;
+        }
+
+        .whatsapp-main {
+            display: inline-block;
+
+            background: white;
+
+            color: #294b2a;
+
+            padding: 14px 30px;
+
+            border-radius: 30px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .whatsapp-main:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 20px rgba(0,0,0,0.2);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #172718;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 25px 15px;
+        }
+
+        footer h3 {
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            font-size: 14px;
+
+            opacity: 0.8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+            .nav-links {
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 50px 5%;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                gap: 35px;
+            }
+
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image-box {
+                max-width: 350px;
+            }
+
+            .hero-image img {
+                height: 320px;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+
+                max-width: 500px;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .hero-text h1 {
+                font-size: 34px;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+            .product-image {
+                height: 280px;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-<header>
-  <h1>SK HERBAL PRODUCTS</h1>
-  <p>Natural Care for Natural Beauty 🌿</p>
-</header>
-<!-- PRODUCTS SECTION -->
-<style>
-.products-section {
-    background: #f7f4ed;
-    padding: 50px 20px;
-    text-align: center;
-}
 
-.products-section h2 {
-    font-size: 34px;
-    color: #294b2a;
-    margin-bottom: 8px;
-}
+<!-- =========================
+     NAVIGATION
+========================= -->
 
-.products-subtitle {
-    color: #777;
-    margin-bottom: 30px;
-}
+<nav>
 
-.products-grid {
-    max-width: 950px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+    <div class="logo">
+        🌿 SK HERBAL PRODUCTS
+    </div>
 
-.product-card {
-    background: white;
-    border-radius: 18px;
-    padding: 15px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
-}
+    <ul class="nav-links">
 
-.product-card img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-radius: 14px;
-}
+        <li>
+            <a href="#home">Home</a>
+        </li>
 
-.product-card h3 {
-    color: #294b2a;
-    font-size: 24px;
-    margin: 14px 0 6px;
-}
+        <li>
+            <a href="#products">Products</a>
+        </li>
 
-.product-card p {
-    color: #666;
-    line-height: 1.4;
-    margin: 6px 0;
-}
+        <li>
+            <a href="#about">About</a>
+        </li>
 
-.price {
-    color: #96703b !important;
-    font-size: 20px;
-    font-weight: bold;
-}
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
 
-.order-button {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 10px 24px;
-    background: #294b2a;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: bold;
-}
+    </ul>
 
-@media (max-width: 700px) {
-    .products-grid {
-        grid-template-columns: 1fr;
-    }
+</nav>
 
-    .product-card img {
-        height: 300px;
-    }
-}
-</style>
 
-<section class="products-section" id="products">
 
-    <h2>Our Herbal Products</h2>
+<!-- =========================
+     HERO
+========================= -->
 
-    <p class="products-subtitle">
-        Natural care for healthy, beautiful hair
-    </p>
+<header class="hero" id="home">
 
-    <div class="products-grid">
+    <div class="hero-content">
 
-        <!-- HAIR OIL -->
-        <div class="product-card">
 
-            <img src="herbal oil.jpg"
-                 alt="SK Herbal Hair Oil">
+        <div class="hero-text">
 
-            <h3>Herbal Hair Oil</h3>
+            <h1>
+                SK Herbal Products
+            </h1>
+
+            <h2>
+                Natural Care for Natural Beauty 🌿
+            </h2>
 
             <p>
-                Promotes hair growth and helps keep your hair
-                stronger, thicker and healthier.
+                Discover gentle herbal hair care made with
+                natural herbs and carefully selected extracts.
+                Give your hair the care it deserves.
             </p>
 
-            <p class="price">Rs. 300</p>
+            <div class="hero-buttons">
 
-            <a href="#contact" class="order-button">
-                Order Now
-            </a>
+                <a href="#products"
+                   class="btn btn-primary">
+
+                    Explore Products
+
+                </a>
+
+                <a href="https://wa.me/923064567039?text=Hello%20SK%20Herbal%20Products%2C%20I%20would%20like%20to%20place%20an%20order."
+                   target="_blank"
+                   class="btn btn-secondary">
+
+                    Order on WhatsApp
+
+                </a>
+
+            </div>
 
         </div>
 
-        <!-- SHAMPOO -->
-        <div class="product-card">
 
-            <img src="herbal shampoo.jpg"
-                 alt="SK Herbal Shampoo">
 
-            <h3>Herbal Shampoo</h3>
+        <div class="hero-image">
 
-            <p>
-                Natural care for clean, soft and healthy hair,
-                made with natural herbs and extracts.
-            </p>
+            <div class="hero-image-box">
 
-            <p class="price">Rs. 400</p>
+                <img src="herbal-shampoo.jpg"
+                     alt="SK Herbal Shampoo">
 
-            <a href="#contact" class="order-button">
-                Order Now
-            </a>
+            </div>
 
         </div>
+
 
     </div>
 
-</section>
-<section class="products-section" id="products">
+</header>
 
-    <h2>Our Herbal Products</h2>
 
-    <p class="subtitle">
-        Natural care for healthy, beautiful hair
-    </p>
+
+<!-- =========================
+     PRODUCTS
+========================= -->
+
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>
+            Our Herbal Products
+        </h2>
+
+        <p>
+            Natural care for healthy, beautiful hair
+        </p>
+
+    </div>
+
 
     <div class="products-grid">
 
+
         <!-- HAIR OIL -->
+
         <div class="product-card">
 
-            <img src="herbal oil.jpg"
-                 alt="SK Herbal Hair Oil">
+            <div class="product-image">
 
-            <h3>Herbal Hair Oil</h3>
+                <img src="herbal oil.jpg"
+                     alt="SK Herbal Hair Oil">
 
-            <p>
-                Promotes hair growth and helps keep your hair
-                stronger, thicker and healthier.
+            </div>
+
+            <h3>
+                Herbal Hair Oil
+            </h3>
+
+            <p class="product-description">
+
+                Promotes hair growth and helps keep
+                your hair stronger, thicker and healthier.
+
             </p>
 
-            <p class="product-price">
+            <p class="product-details">
+                Natural Hair Care • 120 ml
+            </p>
+
+            <p class="price">
                 Rs. 300
             </p>
 
-            <a href="#contact" class="shop-button">
-                Order Now
+            <a class="order-btn"
+               href="https://wa.me/923064567039?text=Hello%20SK%20Herbal%20Products%2C%20I%20would%20like%20to%20order%20Herbal%20Hair%20Oil%20for%20Rs.%20300."
+               target="_blank">
+
+                Order on WhatsApp
+
             </a>
 
         </div>
+
 
 
         <!-- SHAMPOO -->
+
         <div class="product-card">
 
-            <img src="products.jpg"
-                 alt="SK Herbal Shampoo">
+            <div class="product-image">
 
-            <h3>Herbal Shampoo</h3>
+                <img src="herbal-shampoo.jpg"
+                     alt="SK Herbal Shampoo">
 
-            <p>
-                Natural care for clean, soft and healthy hair,
-                made with natural herbs and extracts.
+            </div>
+
+            <h3>
+                Herbal Shampoo
+            </h3>
+
+            <p class="product-description">
+
+                Natural care for clean, soft and healthy
+                hair, made with natural herbs and extracts.
+
             </p>
 
-            <p class="product-price">
+            <p class="product-details">
+                Paraben Free • Sulphate Free • 250 ml
+            </p>
+
+            <p class="price">
                 Rs. 400
             </p>
 
-            <a href="#contact" class="shop-button">
-                Order Now
+            <a class="order-btn"
+               href="https://wa.me/923064567039?text=Hello%20SK%20Herbal%20Products%2C%20I%20would%20like%20to%20order%20Herbal%20Shampoo%20for%20Rs.%20400."
+               target="_blank">
+
+                Order on WhatsApp
+
             </a>
 
         </div>
 
+
     </div>
 
 </section>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#products">Products</a>
-  <a href="#order">Order Now</a>
-</nav>
 
-<section class="hero" id="home">
-  <h2>Discover Natural Beauty</h2>
-  <p>Herbal products made with care for your everyday beauty routine.</p>
-  <a class="button" href="#products">Explore Products</a>
-</section>
 
-<section class="products" id="products">
-  <h2>Our Products</h2>
 
-  <div class="product-container">
+<!-- =========================
+     ABOUT
+========================= -->
 
-   <!DOCTYPE html>
-<html>
-<head>
-<title>SK Herbal Products</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body style="font-family: Arial; text-align: center; background: #f5f5f5; margin: 0;">
+<section class="about" id="about">
 
-<h1 style="background: #2d6a4f; color: white; padding: 20px; margin: 0;">SK HERBAL PRODUCTS</h1>
-<p style="margin: 10px 0; color: #555;">100% Natural & Chemical Free</p>
+    <div class="about-container">
 
-<!-- HAIR OIL CARD -->
-<div class="card">
-    <img src="herbal oil.jpg" alt="SK Herbal Hair Oil">
-    <h3>HERBAL HAIR OIL</h3>
-    <p>Promotes Hair Growth - Stronger, Thicker, Healthier<br>Net Vol: 120ml</p>
-    <p class="price">Rs. 300</p>
-    <a href="https://wa.me/923064567039" class="btn">Order on WhatsApp</a>
-</div>
+        <h2>
+            About SK Herbal Products
+        </h2>
 
-<!-- SHAMPOO CARD -->
-<div class="card">
-    <img src="herbal shampoo.jpg" alt="SK Herbal Hair Oil">
-    <h3>HERBAL SHAMPOO</h3>
-    <p>Natural Care for Clean Soft & Healthy Hair<br>Paraben Free - Sulphate Free<br>Net Vol: 250ml</p>
-    <p class="price">Rs. 300</p>
-    <a href="https://wa.me/923064567039" class="btn">Order on WhatsApp</a>
-</div>
+        <p>
+            At SK Herbal Products, we believe that beautiful
+            hair begins with gentle, thoughtful care.
+        </p>
 
-<div style="padding: 20px; color: #777;">© 2026 SK Herbal Products</div>
+        <p>
+            Our herbal hair care products are created with
+            natural herbs and extracts to support a simple,
+            nourishing everyday hair-care routine.
+        </p>
 
-</body>
-</html>
-    <div class="product">
-      <h3>🧼 Herbal Beauty Soap</h3>
-      <p>Handmade</p>
-      <p>Handmade soap for a refreshing daily skincare routine.</p>
-      <a class="button" href="#order">Order Now</a>
+        <p>
+            We focus on quality, simplicity and natural beauty.
+        </p>
+
     </div>
 
-    <div class="product">
-      <h3>✨ Whitening Cream</h3>
-      <p>Natural Care</p>
-      <p>A gentle addition to your everyday skincare routine.</p>
-      <a class="button" href="#order">Order Now</a>
+</section>
+
+
+
+<!-- =========================
+     BENEFITS
+========================= -->
+
+<section class="benefits">
+
+    <div class="section-title">
+
+        <h2>
+            Why Choose SK Herbal?
+        </h2>
+
+        <p>
+            Simple care inspired by nature
+        </p>
+
     </div>
 
-  </div>
+
+    <div class="benefits-grid">
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                🌿
+            </div>
+
+            <h3>
+                Herbal Care
+            </h3>
+
+            <p>
+                Made with natural herbs and botanical
+                extracts for your daily hair-care routine.
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                ✨
+            </div>
+
+            <h3>
+                Gentle Beauty
+            </h3>
+
+            <p>
+                Simple products designed for clean,
+                soft and healthy-looking hair.
+            </p>
+
+        </div>
+
+
+
+        <div class="benefit-card">
+
+            <div class="benefit-icon">
+                💚
+            </div>
+
+            <h3>
+                Natural Choice
+            </h3>
+
+            <p>
+                A nature-inspired approach to everyday
+                personal care.
+            </p>
+
+        </div>
+
+
+    </div>
+
 </section>
 
-<section class="order" id="order">
-  <h2>Ready to Order?</h2>
-  <p>Contact us on WhatsApp to place your order.</p>
-  <br>
 
-  <a class="button" href="https://wa.me/923001234567">
-    Order on WhatsApp
-  </a>
+
+<!-- =========================
+     ORDER / CONTACT
+========================= -->
+
+<section class="order-section" id="contact">
+
+    <h2>
+        Ready to Order?
+    </h2>
+
+    <p>
+        Contact us on WhatsApp and place your order today.
+    </p>
+
+    <a href="https://wa.me/923064567039?text=Hello%20SK%20Herbal%20Products%2C%20I%20would%20like%20to%20place%20an%20order."
+       target="_blank"
+       class="whatsapp-main">
+
+        📱 Order on WhatsApp
+
+    </a>
+
 </section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-  <p>© 2026 SK Herbal Products — Natural Care for Natural Beauty</p>
+
+    <h3>
+        🌿 SK HERBAL PRODUCTS
+    </h3>
+
+    <p>
+        Natural Care for Natural Beauty
+    </p>
+
+    <p>
+        © 2026 SK Herbal Products. All Rights Reserved.
+    </p>
+
 </footer>
+
 
 </body>
 </html>
