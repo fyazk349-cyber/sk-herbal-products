@@ -51,11 +51,16 @@
         }
 
         .logo {
-            color: #294b2a;
-            font-size: 22px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+            display: flex;
+            align-items: center;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    display: block;
+}
 
         .nav-links {
             display: flex;
@@ -351,6 +356,40 @@
 
             transform: scale(1.03);
         }
+        .facebook-btn {
+    display: inline-block;
+
+    margin-left: 10px;
+
+    background: #3b5998;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.facebook-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+
+    .facebook-btn {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+}
 
 
         /* =========================
@@ -494,6 +533,40 @@
             box-shadow:
                 0 8px 20px rgba(0,0,0,0.2);
         }
+        .facebook-btn {
+    display: inline-block;
+
+    margin-left: 10px;
+
+    background: #3b5998;
+
+    color: white;
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.facebook-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+
+    .facebook-btn {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+}
 
 
         /* =========================
@@ -526,6 +599,10 @@
         ========================= */
 
         @media (max-width: 800px) {
+            .logo img {
+                width: 65px;
+                height: 65px;
+            }
 
             nav {
                 flex-direction: column;
@@ -625,7 +702,7 @@
 <nav>
 
     <div class="logo">
-        🌿 SK HERBAL PRODUCTS
+        <img scr="sk logo.jpg" alt="SK Herbal Products Logo">
     </div>
 
     <ul class="nav-links">
@@ -1245,6 +1322,11 @@
         © 2026 SK Herbal Products. All Rights Reserved.
     </p>
 
+<a href="https://www.facebook.com/share/1CEZGDDa5U/"
+   target="_blank"
+   class="facebook-link">
+    📘 Follow us on Facebook
+</a>
 </footer>
 
 
